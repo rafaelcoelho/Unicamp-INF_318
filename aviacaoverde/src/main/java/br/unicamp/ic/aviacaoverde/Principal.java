@@ -1,4 +1,4 @@
-	package br.unicamp.ic.aviacaoverde;
+package br.unicamp.ic.aviacaoverde;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class Principal {
 
 	private final Scanner scanner;
 
-	private ControlerVoo voo;
+	private Controler voo;
 	private int opcao;
 
 	public Principal() {
@@ -165,7 +165,7 @@ public class Principal {
 	}
 
 	private void criarVoo() {
-		voo = new Voo();
+		voo = new ControlerVoo();
 		voo.setNumero("AD4032");
 		voo.setAeronave(criarAeronave());
 		voo.setRota(criarRota());

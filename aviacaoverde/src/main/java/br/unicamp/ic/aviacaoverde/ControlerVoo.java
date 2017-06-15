@@ -3,34 +3,82 @@ package br.unicamp.ic.aviacaoverde;
 import java.util.List;
 import java.util.Stack;
 
-public interface ControlerVoo {
+public class ControlerVoo implements Controler {
 
-	void adicionarParaReservas(Reserva reserva);
+	private Voo voo;
+	
+	public ControlerVoo() {
+		voo = new Voo();
+	}
 
-	void adicionarParaListaEspera(Reserva reserva);
+	@Override
+	public void adicionarParaReservas(Reserva reserva) {
+		voo.adicionarParaListaEspera(reserva);
+	}
 
-	Reserva buscarReserva(Integer idPassageiro);
+	@Override
+	public void adicionarParaListaEspera(Reserva reserva) {
+		voo.adicionarParaListaEspera(reserva);
+	}
 
-	boolean existeReserva(Integer idPassageiro);
+	@Override
+	public Reserva buscarReserva(Integer idPassageiro) {
+		return voo.buscarReserva(idPassageiro);
+	}
 
-	String getNumero();
+	@Override
+	public boolean existeReserva(Integer idPassageiro) {
+		return voo.existeReserva(idPassageiro);
+	}
 
-	void setNumero(String numero);
+	@Override
+	public String getNumero() {
+		return voo.getNumero();
+	}
 
-	Aeronave getAeronave();
+	@Override
+	public void setNumero(String numero) {
+		voo.setNumero(numero);
+	}
 
-	void setAeronave(Aeronave aeronave);
+	@Override
+	public Aeronave getAeronave() {
+		return voo.getAeronave();
+	}
 
-	Rota getRota();
+	@Override
+	public void setAeronave(Aeronave aeronave) {
+		voo.setAeronave(aeronave);
+	}
 
-	void setRota(Rota rota);
+	@Override
+	public Rota getRota() {
+		return voo.getRota();
+	}
 
-	List<Reserva> getReservas();
+	@Override
+	public void setRota(Rota rota) {
+		voo.setRota(rota);
+	}
 
-	void setReservas(List<Reserva> reservas);
+	@Override
+	public List<Reserva> getReservas() {
+		return voo.getReservas();
+	}
 
-	Stack<Reserva> getListaDeEspera();
+	@Override
+	public void setReservas(List<Reserva> reservas) {
+		voo.setReservas(reservas);
+	}
 
-	void setListaDeEspera(Stack<Reserva> listaDeEspera);
+	@Override
+	public Stack<Reserva> getListaDeEspera() {
+		return voo.getListaDeEspera();
+	}
+
+	@Override
+	public void setListaDeEspera(Stack<Reserva> listaDeEspera) {
+		voo.setListaDeEspera(listaDeEspera);
+	}
 
 }
