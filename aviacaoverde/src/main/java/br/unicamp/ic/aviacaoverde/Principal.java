@@ -1,4 +1,4 @@
-package br.unicamp.ic.aviacaoverde;
+	package br.unicamp.ic.aviacaoverde;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class Principal {
 
 	private final Scanner scanner;
 
-	private Voo voo;
+	private ControlerVoo voo;
 	private int opcao;
 
 	public Principal() {
