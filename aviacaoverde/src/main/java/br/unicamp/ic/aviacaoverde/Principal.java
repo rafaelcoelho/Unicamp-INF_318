@@ -6,7 +6,7 @@ public class Principal {
 
 	private final Scanner scanner;
 
-	private Controler voo;
+	private ControlerVoo voo;
 	private int opcao;
 
 	public Principal() {
